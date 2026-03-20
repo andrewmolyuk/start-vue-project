@@ -1,0 +1,22 @@
+// src/templates/devcontainer/Dockerfile.tsx
+/** @jsx docker */
+/** @jsxFrag docker */
+import { docker } from '../../utils/tsx-pragmas'
+
+export interface DockerfileProps {
+  useBun?: boolean
+  useAgent?: boolean
+  useSkills?: boolean
+}
+
+export default function Dockerfile({ useBun, useAgent, useSkills }: DockerfileProps) {
+  return (
+    <>
+      {`# Base image\nFROM mcr.microsoft.com/devcontainers/base:ubuntu\n\n# Common dependencies\nRUN apt-get update && apt-get install -y \\\n    curl \\\n    git \\\n    ca-certificates \\\n    && rm -rf /var/lib/apt/lists/*\n\n`}
+      {useBun && `# Install Bun\nRUN curl -fsSL https://bun.sh/install | bash\nENV PATH="/root/.bun/bin:$PATH"\n\n`}
+      {useAgent && `# Copy Agent.md (if present in project root)\nCOPY ../Agent.md /workspace/Agent.md\n\n`}
+      {useSkills && `# Copy skills directory (if present)\nCOPY ../skills /workspace/skills\n\n`}
+      {`# Set working directory\nWORKDIR /workspace\n\n# [Optional] Uncomment to install additional packages\n# RUN apt-get update && apt-get install -y <package-name>\n`}
+    </>
+  )
+}

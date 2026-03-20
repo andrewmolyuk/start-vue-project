@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Misc
+.DS_Store
+my-vue-app/
+
+# Build output
+dist/
+
+# Test output
+coverage/

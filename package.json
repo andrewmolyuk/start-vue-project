@@ -1,0 +1,44 @@
+{
+  "name": "start-vue-project",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/andrewmolyuk/start-vue-project#readme",
+  "bugs": {
+    "url": "https://github.com/andrewmolyuk/start-vue-project/issues"
+  },
+  "license": "MIT",
+  "author": "Andrew Molyuk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewmolyuk/start-vue-project.git"
+  },
+  "bin": {
+    "start-vue-project": "src/main.ts"
+  },
+  "main": "src/main.js",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "inquirer": "^13.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^20.5.0",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.5",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/bun": "^1.3.10",
+    "@types/node": "^25.5.0",
+    "commitlint": "^20.5.0",
+    "husky": "^9.1.7",
+    "npm-check-updates": "^19.6.5",
+    "oxfmt": "^0.41.0",
+    "oxlint": "^1.56.0",
+    "semantic-release": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

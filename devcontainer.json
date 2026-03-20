@@ -1,0 +1,17 @@
+{
+  "name": "start-vue-project",
+  "runArgs": ["--name", "start-vue-project-devcontainer"],
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["oxc.oxc-vscode", "streetsidesoftware.code-spell-checker"]
+    }
+  },
+  "remoteUser": "dev",
+  "mounts": [
+    "source=${env:HOME}/.ssh,target=/home/dev/.ssh,type=bind,consistency=cached",
+    "source=${env:HOME}/.zsh_history,target=/home/dev/.zsh_history,type=bind,consistency=cached"
+  ]
+}

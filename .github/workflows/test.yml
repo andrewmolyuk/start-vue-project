@@ -1,0 +1,39 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Validate commit messages
+        uses: wagoid/commitlint-github-action@v6
+        with:
+          configFile: .commitlintrc
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: 'bun.lock'
+          registry-url: 'https://registry.npmjs.org/'
+
+      - uses: oven-sh/setup-bun@v2.2.0
+
+      - run: make test-lcov
+
+      - uses: codacy/codacy-coverage-reporter-action@v1.3.0
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: coverage/lcov.info
