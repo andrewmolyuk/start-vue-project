@@ -1,6 +1,7 @@
 // src/templates/devcontainer/Dockerfile.tsx
 /** @jsx docker */
 /** @jsxFrag docker */
+// eslint-disable-next-line no-unused-vars
 import { docker } from '../../utils/tsx-pragmas'
 
 export interface DockerfileProps {
