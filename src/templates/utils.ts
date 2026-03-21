@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { Config } from '../types'
+import { type Config } from '../types'
 
 // Pragma for plain text Dockerfile generation
 export function docker(_: null, __: null, ...children: string[]): string {
