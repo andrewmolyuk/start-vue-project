@@ -3,7 +3,7 @@
 A CLI tool to quickly scaffold a Vue 3 project with Vite, TypeScript, Tailwind CSS, and other useful configurations for development and deployment.
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b10bbd9fb7674990bee223909fe90420)](https://app.codacy.com/gh/andrewmolyuk/start-vue-project/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
-[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/3e2386808dfc4c90b191098d7faa6f5f)](https://app.codacy.com/gh/andrewmolyuk/start-vue-project/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/b10bbd9fb7674990bee223909fe90420)](https://app.codacy.com/gh/andrewmolyuk/start-vue-project/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 [![CodeQL](https://github.com/andrewmolyuk/start-vue-project/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrewmolyuk/start-vue-project/actions/workflows/github-code-scanning/codeql)
 [![Copilot code review](https://github.com/andrewmolyuk/start-vue-project/actions/workflows/copilot-pull-request-reviewer/copilot-pull-request-reviewer/badge.svg)](https://github.com/andrewmolyuk/start-vue-project/actions/workflows/copilot-pull-request-reviewer/copilot-pull-request-reviewer)
 
