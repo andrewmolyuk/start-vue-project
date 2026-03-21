@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["bunx", "Molyuk", "oxfmt", "oxlint"],
+  "cSpell.words": ["bunx", "codacy", "molyuk", "oxfmt", "oxlint"],
   "editor.formatOnSave": true,
   "github.copilot.enable": { "*": true, "markdown": true },
   "[markdown]": {
