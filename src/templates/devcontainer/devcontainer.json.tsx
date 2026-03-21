@@ -1,4 +1,3 @@
-// src/templates/devcontainer/devcontainer.json.tsx
 /** @jsx json */
 /** @jsxFrag json */
 import { Config } from '../../types'

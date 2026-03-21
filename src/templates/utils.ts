@@ -8,7 +8,7 @@ export function docker(_: null, __: null, ...children: string[]): string {
 }
 
 // Pragma for JSON generation
-export function json(_: null, props: any): string {
+export function json(_: null, props: object): string {
   return JSON.stringify(props, null, 2)
 }
 
