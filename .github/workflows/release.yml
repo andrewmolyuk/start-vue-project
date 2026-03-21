@@ -27,6 +27,13 @@ jobs:
 
       - uses: oven-sh/setup-bun@v2.2.0
 
+      - run: make test-lcov
+
+      - uses: codacy/codacy-coverage-reporter-action@v1.3.0
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: coverage/lcov.info
+
       - run: make build
 
       - run: npx semantic-release
