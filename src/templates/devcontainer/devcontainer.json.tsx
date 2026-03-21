@@ -1,14 +1,10 @@
 // src/templates/devcontainer/devcontainer.json.tsx
 /** @jsx json */
 /** @jsxFrag json */
-import { json } from '../../utils/tsx-pragmas'
+import { Config } from '../../types'
+import { json } from '../utils'
 
-export interface DevcontainerJsonProps {
-  projectName: string
-  useBun?: boolean
-}
-
-export default function DevcontainerJson({ projectName, useBun }: DevcontainerJsonProps) {
+export default function DevcontainerJson({ projectName, useBun }: Config) {
   return json(null, {
     name: `${projectName}-devcontainer`,
     build: { dockerfile: 'Dockerfile' },
