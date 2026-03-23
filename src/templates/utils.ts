@@ -2,14 +2,22 @@ import fs from 'fs'
 import path from 'path'
 import { type Config } from '../types'
 
-// Pragma for plain text Dockerfile generation
-export function docker(_: null, __: null, ...children: string[]): string {
+// Pragma for plain text file generation (Dockerfile, Makefile, Markdown, YAML, etc.)
+export function text(_: null, __: null, ...children: string[]): string {
   return children.join('')
 }
 
-// Pragma for JSON generation
+// Pragma for JSON file generation
 export function json(_: null, props: object): string {
   return JSON.stringify(props, null, 2)
+}
+
+// Pragma for XML/HTML/SVG file generation
+export function xml(tag: string, props: Record<string, any>, ...children: string[]): string {
+  const attrs = Object.entries(props || {})
+    .map(([k, v]) => ` ${k}="${v}"`)
+    .join('')
+  return `<${tag}${attrs}>${children.join('')}</${tag}>`
 }
 
 export const generate = (config: Config, template: (config: Config) => string, filename: string) => {

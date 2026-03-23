@@ -9,8 +9,8 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "jsx": "react",
-    "jsxFactory": "docker",
-    "jsxFragmentFactory": "docker"
+    "jsxFactory": "text",
+    "jsxFragmentFactory": "text"
   },
   "include": ["src/**/*.ts", "tests/**/*.ts"]
 }

@@ -1,7 +1,8 @@
 /** @jsx json */
 /** @jsxFrag json */
-import { Config } from '../../types'
 import { json } from '../utils'
+
+import { Config } from '../../types'
 
 export default function DevcontainerJson({ projectName, useBun }: Config) {
   return json(null, {
